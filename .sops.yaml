@@ -1,3 +1,8 @@
 creation_rules:
+  - path_regex: cluster/.*\.sops\.ya?ml
+    encrypted_regex: "^(data|stringData)$"
+    key_groups:
+      - pgp: [CDA57D7FFB3FD45FB56D179FCD40D20000800BDD]
+        age: [age17dcvp279ejrfxcjhtcj0cmvhkk3mxuz7jvyzqws250emwxy8v3mq2j4ye2]
   - pgp: >-
       CDA57D7FFB3FD45FB56D179FCD40D20000800BDD
