@@ -6,3 +6,6 @@ metadata:
   namespace: flux-system
 data:
   TIMEZONE: "Asia/Shanghai"
+  METALLB_LB_RANGE: 10.0.0.10-10.0.0.20
+  METALLB_K8S_GATEWAY_ADDR: 10.0.0.10
+  METALLB_INGRESS_ADDR: 10.0.0.11
