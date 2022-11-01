@@ -23,6 +23,8 @@ spec:
     remediation:
       retries: 5
   dependsOn:
+    - name: metallb
+      namespace: networking
     - name: cert-manager
       namespace: networking
     - name: cert-manager-issuers
