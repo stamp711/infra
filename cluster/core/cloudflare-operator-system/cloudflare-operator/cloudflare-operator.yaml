@@ -29,3 +29,12 @@ spec:
   sourceRef:
     kind: GitRepository
     name: cloudflare-operator
+  patches:
+    - target:
+        kind: Deployment
+        name: cloudflare-operator-controller-manager
+        namespace: cloudflare-operator-system
+      patch: |
+        - op: add
+          path: /spec/template/spec/containers/1/args/-
+          value: --overwrite-unmanaged-dns=true
