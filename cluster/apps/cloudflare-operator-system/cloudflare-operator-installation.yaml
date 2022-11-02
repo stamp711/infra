@@ -1,0 +1,32 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: cloudflare-operator-installation
+  namespace: cloudflare-operator-system
+spec:
+  interval: 10m
+  ref:
+    # renovate: datasource=github-tags depName=adyanth/cloudflare-operator
+    tag: "v0.8.2"
+  url: https://github.com/adyanth/cloudflare-operator
+  ignore: |
+    # exclude all
+    /*
+    # path to manifests
+    !/config
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: cloudflare-operator-installation
+  namespace: cloudflare-operator-system
+spec:
+  interval: 10m
+  path: ./config/default
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: cloudflare-operator-installation
+
