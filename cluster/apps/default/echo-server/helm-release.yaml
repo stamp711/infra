@@ -33,6 +33,8 @@ spec:
         ports:
           http:
             port: &port 8080
+        annotations:
+          cfargotunnel.com/cluster-tunnel: "cluster-tunnel"
     probes:
       liveness: &probes
         enabled: true
