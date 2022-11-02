@@ -8,7 +8,7 @@ spec:
     domain: ${SECRET_DOMAIN}
     secret: cloudflare-secrets
     accountName: ${SECRET_CLOUDFLARE_ACCOUNT_NAME}
-  existingTunnel:
+  newTunnel:
     name: k8s-cluster-tunnel
   noTlsVerify: true
   size: 2

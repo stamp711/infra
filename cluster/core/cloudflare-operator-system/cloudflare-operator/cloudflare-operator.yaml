@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: cloudflare-operator-installation
+  name: cloudflare-operator
   namespace: cloudflare-operator-system
 spec:
   interval: 10m
@@ -19,7 +19,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: cloudflare-operator-installation
+  name: cloudflare-operator
   namespace: cloudflare-operator-system
 spec:
   interval: 10m
@@ -28,5 +28,4 @@ spec:
   wait: false
   sourceRef:
     kind: GitRepository
-    name: cloudflare-operator-installation
-
+    name: cloudflare-operator
