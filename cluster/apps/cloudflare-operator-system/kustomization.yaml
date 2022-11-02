@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - namespace.yaml
   - cloudflare-operator-installation.yaml
+  - clustertunnel.yaml
+  - secret.sops.yaml

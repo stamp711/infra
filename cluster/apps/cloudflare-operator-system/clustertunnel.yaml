@@ -1,0 +1,13 @@
+apiVersion: networking.cfargotunnel.com/v1alpha1
+kind: ClusterTunnel
+metadata:
+  name: cluster-tunnel
+spec:
+  newTunnel:
+    name: k8s-cluster-tunnel
+  size: 2
+  cloudflare:
+    email: ${SECRET_CLOUDFLARE_EMAIL}
+    domain: ${SECRET_DOMAIN}
+    secret: cloudflare-secrets
+    accountName: ${SECRET_CLOUDFLARE_ACCOUNT_NAME}
