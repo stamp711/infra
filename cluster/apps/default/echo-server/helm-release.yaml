@@ -34,7 +34,9 @@ spec:
           http:
             port: &port 8080
         annotations:
-          cfargotunnel.com/cluster-tunnel: "cluster-tunnel"
+          cfargotunnel.com/cluster-tunnel: cluster-tunnel
+          cfargotunnel.com/proto: https
+          cfargotunnel.com/target: https://ingress-nginx-controller.networking
     probes:
       liveness: &probes
         enabled: true
