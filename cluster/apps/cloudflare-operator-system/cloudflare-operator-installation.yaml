@@ -25,7 +25,7 @@ spec:
   interval: 10m
   path: ./config/default
   prune: true
-  wait: true
+  wait: false
   sourceRef:
     kind: GitRepository
     name: cloudflare-operator-installation
