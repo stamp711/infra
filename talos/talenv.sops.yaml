@@ -1,0 +1,23 @@
+domainName: ENC[AES256_GCM,data:CnVKALg+mY1l,iv:LJvQHpWio7WivGSfFfnhLBSFAHaS5rH24NYKkRPromY=,tag:jX1z/ZLZ0HKRmc1KsbLzNw==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-11-04T13:13:13Z"
+    mac: ENC[AES256_GCM,data:YghUw/TxgpRwK7rVjOxPDZNtWrF7uDDxCCYxdkvyrEbmXaYkL3LN8KpSLn2w6r1qvp2oDWVTouwIm0IuR1RFihD6ENgBmrl0Czn3cp31XTKTUuEdjx8kn8xPDNkV0tXoiuxGXsYxk11vIgvgOkRtO5YiWMfaiQXZEp2qx0Umsas=,iv:XrQ/ydL4VxTSkwaqiqHsWVmf0YCfyd7YMBJZ74l/1oM=,tag:TRVVQpz5RDah6KouoFthqw==,type:str]
+    pgp:
+        - created_at: "2022-11-04T11:25:37Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hF4D910MxD6sogoSAQdAnyPBOzD5uemHRipTz5QKtNpu/OAE+xTg0Kfzr91FAU4w
+            000yW4UYVKWQNSoDJVkqKlJ1Y4aGz9Ko4qn3xWJagV5si9cYSXb9aLEuKFt0bUzI
+            0lwBLrv7JcMyxPg/k00eEUqannawbW21HWg1R930clKAYuTgva9qcp9peowPyyGz
+            MLnqPMvxozFNijKg5J0xbw3GlWz3QDh3wBI/hyd1T283PNsWV7Nt/czA9IsOqg==
+            =mUkp
+            -----END PGP MESSAGE-----
+          fp: CDA57D7FFB3FD45FB56D179FCD40D20000800BDD
+    unencrypted_suffix: _unencrypted
+    version: 3.7.3
