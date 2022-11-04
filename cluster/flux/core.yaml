@@ -9,7 +9,7 @@ spec:
   path: ./cluster/core
   prune: true
   dependsOn:
-    - name: charts
+    - name: sources
     - name: config
   sourceRef:
     kind: GitRepository

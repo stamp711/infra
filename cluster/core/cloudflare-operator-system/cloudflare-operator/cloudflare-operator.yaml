@@ -1,21 +1,4 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
-metadata:
-  name: cloudflare-operator
-  namespace: cloudflare-operator-system
-spec:
-  interval: 10m
-  ref:
-    # renovate: datasource=github-tags depName=adyanth/cloudflare-operator
-    tag: "v0.8.3"
-  url: https://github.com/adyanth/cloudflare-operator
-  ignore: |
-    # exclude all
-    /*
-    # path to manifests
-    !/config
----
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
@@ -29,6 +12,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: cloudflare-operator
+    namespace: flux-system
   patches:
     - target:
         kind: Deployment

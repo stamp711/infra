@@ -9,7 +9,7 @@ spec:
   path: ./cluster/apps
   prune: true
   dependsOn:
-    - name: charts
+    - name: sources
     - name: config
     - name: core
   sourceRef:
