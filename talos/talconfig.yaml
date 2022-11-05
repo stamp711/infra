@@ -30,6 +30,11 @@ nodes:
     ipAddress: ${acornIp}
     controlPlane: false
     installDisk: /dev/vda
+    patches:
+      - |-
+        machine:
+          certSANs:
+            - ${acornIp}
 controlPlane:
   patches:
     - "@patch/extensions.yaml"
