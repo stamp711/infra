@@ -1,10 +1,10 @@
-clusterName: chopin
+clusterName: home
 talosVersion: v1.2.6
 kubernetesVersion: v1.25.3
 endpoint: https://10.0.0.10:6443
 allowSchedulingOnControlPlanes: true
 nodes:
-  - hostname: kmaster0
+  - hostname: chopin
     ipAddress: 10.0.0.3
     controlPlane: true
     installDisk: /dev/nvme0n1
@@ -15,10 +15,23 @@ nodes:
           - 10.0.0.3/24
         vip:
           ip: 10.0.0.10
+  - hostname: stella
+    ipAddress: 10.0.0.4
+    controlPlane: true
+    installDisk: /dev/sda
+    networkInterfaces:
+      - interface: eth0
+        dhcp: true
+        addresses:
+          - 10.0.0.4/24
+        vip:
+          ip: 10.0.0.10
 controlPlane:
   patches:
     - "@patch/extensions.yaml"
+    - "@patch/kubespan.yaml"
     - "@patch/remove-admission-control.yaml"
 worker:
   patches:
     - "@patch/extensions.yaml"
+    - "@patch/kubespan.yaml"
