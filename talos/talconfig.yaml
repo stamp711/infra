@@ -26,12 +26,18 @@ nodes:
           - 10.0.0.4/24
         vip:
           ip: 10.0.0.10
+  - hostname: acorn
+    ipAddress: ${acornIp}
+    controlPlane: false
+    installDisk: /dev/vda
 controlPlane:
   patches:
     - "@patch/extensions.yaml"
     - "@patch/kubespan.yaml"
     - "@patch/remove-admission-control.yaml"
+    - "@patch/wipe-on-install.yaml"
 worker:
   patches:
     - "@patch/extensions.yaml"
     - "@patch/kubespan.yaml"
+    - "@patch/wipe-on-install.yaml"

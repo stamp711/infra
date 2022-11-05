@@ -1,12 +1,13 @@
 domainName: ENC[AES256_GCM,data:CnVKALg+mY1l,iv:LJvQHpWio7WivGSfFfnhLBSFAHaS5rH24NYKkRPromY=,tag:jX1z/ZLZ0HKRmc1KsbLzNw==,type:str]
+acornIp: ENC[AES256_GCM,data:Y89gHDfkpw8cOxaHOQ==,iv:TtP9+fIN+drxMpgLuEuH2HWb7D0sp7On2MPqsBdek24=,tag:6pxQY14KVz6+tL3av+lq4w==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2022-11-04T13:13:13Z"
-    mac: ENC[AES256_GCM,data:YghUw/TxgpRwK7rVjOxPDZNtWrF7uDDxCCYxdkvyrEbmXaYkL3LN8KpSLn2w6r1qvp2oDWVTouwIm0IuR1RFihD6ENgBmrl0Czn3cp31XTKTUuEdjx8kn8xPDNkV0tXoiuxGXsYxk11vIgvgOkRtO5YiWMfaiQXZEp2qx0Umsas=,iv:XrQ/ydL4VxTSkwaqiqHsWVmf0YCfyd7YMBJZ74l/1oM=,tag:TRVVQpz5RDah6KouoFthqw==,type:str]
+    lastmodified: "2022-11-05T15:23:50Z"
+    mac: ENC[AES256_GCM,data:01bCJASYo8Hck1LZwDRCdK6m94yfuOBpk6eKjiVu4ZJ6YEBF1Wk+1Q0p7LAuxptUarlUtUh0kAqpuveVH37hR10z+FtGIlzVaCtW+CdSmJ5K0Js9fzKip3MfXUcTXAa60LqPMqGDbooSaUHKWduVZjFIrtn7OdRnk+9NXhNL45A=,iv:eL+YpFTCuKEssT3COaXfmlgtRs/IFMTvglRnuPngJio=,tag:L/KVseElwKPpa0GflLrypg==,type:str]
     pgp:
         - created_at: "2022-11-04T11:25:37Z"
           enc: |
