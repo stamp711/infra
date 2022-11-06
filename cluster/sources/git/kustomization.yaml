@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - cloudflare-operator.yaml
 - synology-csi-chart.yaml
+- local-path-provisioner.yaml
