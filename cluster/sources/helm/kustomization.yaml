@@ -15,4 +15,5 @@ resources:
 - lwolf.yaml
 - metallb.yaml
 - metrics-server.yaml
+- node-feature-discovery.yaml
 - stakater.yaml
