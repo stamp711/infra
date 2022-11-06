@@ -38,11 +38,13 @@ nodes:
 controlPlane:
   patches:
     - "@patch/extensions.yaml"
+    - "@patch/kubelet-extra-mounts.yaml"
     - "@patch/kubespan.yaml"
     - "@patch/remove-admission-control.yaml"
     - "@patch/wipe-on-install.yaml"
 worker:
   patches:
     - "@patch/extensions.yaml"
+    - "@patch/kubelet-extra-mounts.yaml"
     - "@patch/kubespan.yaml"
     - "@patch/wipe-on-install.yaml"
