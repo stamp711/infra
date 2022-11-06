@@ -12,6 +12,7 @@ resources:
 - jetstack.yaml
 - k8s-gateway.yaml
 - kubereboot.yaml
+- lwolf.yaml
 - metallb.yaml
 - metrics-server.yaml
 - stakater.yaml
