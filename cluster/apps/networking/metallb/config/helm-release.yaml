@@ -34,6 +34,9 @@ spec:
         spec:
           ipAddressPools:
             - default-pool
+          nodeSelectors:
+            - matchLabels:
+                topology.kubernetes.io/region: home
 
       - apiVersion: metallb.io/v1beta1
         kind: IPAddressPool
