@@ -4,6 +4,6 @@ resources:
   - namespace.yaml
   - descheduler
   - kube-cleanup-operator
-  # - metrics-server
+  - metrics-server
   # - node-feature-discovery
   # - reloader
