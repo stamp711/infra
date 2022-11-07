@@ -5,6 +5,7 @@ resources:
 - bjw-s.yaml
 - democratic-csi.yaml
 - descheduler.yaml
+- djjudas21.yaml
 - dysnix.yaml
 - external-dns.yaml
 - gitea.yaml
@@ -17,5 +18,4 @@ resources:
 - metallb.yaml
 - metrics-server.yaml
 - node-feature-discovery.yaml
-- pascaliske.yaml
 - stakater.yaml
