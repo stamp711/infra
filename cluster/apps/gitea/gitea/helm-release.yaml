@@ -23,9 +23,13 @@ spec:
     remediation:
       retries: 5
   values:
+    gitea:
+      admin:
+        existingSecret: gitea-admin
+      podAnnotations:
+        secret.reloader.stakater.com/reload: gitea-admin
     ingress:
       enabled: true
-      # ingressClassName: "nginx"
       hosts:
         - host: &host "gitea.${SECRET_DOMAIN}"
           paths:
