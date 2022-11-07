@@ -17,4 +17,5 @@ resources:
 - metallb.yaml
 - metrics-server.yaml
 - node-feature-discovery.yaml
+- pascaliske.yaml
 - stakater.yaml
