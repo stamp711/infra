@@ -23,6 +23,8 @@ spec:
     remediation:
       retries: 5
   values:
+    image:
+      rootless: true
     gitea:
       admin:
         existingSecret: gitea-admin
