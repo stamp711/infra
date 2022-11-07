@@ -13,7 +13,7 @@ resources:
   - ingress-nginx.yaml
   - jetstack.yaml
   - k8s-gateway.yaml
-  - code-v2.yaml
+  - coder-v2.yaml
   - kubereboot.yaml
   - lwolf.yaml
   - metallb.yaml
