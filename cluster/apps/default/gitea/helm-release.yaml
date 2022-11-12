@@ -29,7 +29,7 @@ spec:
         secret.reloader.stakater.com/reload: gitea-admin
     ingress:
       enabled: true
-      ingressClassName: nginx
+      className: nginx
       hosts:
         - host: &host "gitea.${SECRET_DOMAIN}"
           paths:
