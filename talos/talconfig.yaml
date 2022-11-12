@@ -44,3 +44,17 @@ nodes:
           ip: 10.0.0.10
     patches:
       - "@patch/kubelet-node-labels/home.yaml"
+
+  - hostname: delta
+    ipAddress: 10.0.0.5
+    controlPlane: true
+    installDisk: /dev/nvme0n1
+    networkInterfaces:
+      - interface: eth0
+        dhcp: true
+        addresses:
+          - 10.0.0.5/24
+        vip:
+          ip: 10.0.0.10
+    patches:
+      - "@patch/kubelet-node-labels/home.yaml"
