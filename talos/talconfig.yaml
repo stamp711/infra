@@ -6,6 +6,7 @@ allowSchedulingOnControlPlanes: true
 
 controlPlane:
   patches:
+    - "@patch/disable-cni-and-proxy.yaml"
     - "@patch/extensions.yaml"
     - "@patch/kubelet-extra-mounts.yaml"
     # - "@patch/kubespan.yaml"
