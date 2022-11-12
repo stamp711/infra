@@ -8,13 +8,13 @@ controlPlane:
   patches:
     - "@patch/extensions.yaml"
     - "@patch/kubelet-extra-mounts.yaml"
-    # - "@patch/kubespan.yaml"
+    - "@patch/kubespan.yaml"
     - "@patch/remove-admission-control.yaml"
 worker:
   patches:
     - "@patch/extensions.yaml"
     - "@patch/kubelet-extra-mounts.yaml"
-    # - "@patch/kubespan.yaml"
+    - "@patch/kubespan.yaml"
 
 nodes:
   - hostname: chopin
