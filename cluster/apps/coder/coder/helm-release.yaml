@@ -46,3 +46,5 @@ spec:
       service:
         annotations:
           coredns.io/hostname: "https://coder.${SECRET_DOMAIN}"
+          metallb.universe.tf/loadBalancerIPs: |-
+            ${METALLB_CODER_ADDR}
