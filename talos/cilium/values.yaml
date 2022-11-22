@@ -1,0 +1,12 @@
+securityContext:
+  privileged: true
+ipam:
+  mode: kubernetes
+kubeProxyReplacement: strict
+k8sServiceHost: 10.0.0.10
+k8sServicePort: 6443
+hubble:
+  relay:
+    enabled: true
+  ui:
+    enabled: true

@@ -2,16 +2,18 @@ clusterName: home
 talosVersion: v1.2.6
 kubernetesVersion: v1.25.3
 endpoint: https://10.0.0.10:6443
-allowSchedulingOnControlPlanes: true
+allowSchedulingOnControlPlanes: false
 
 controlPlane:
   patches:
+    - "@patch/cni.yaml"
     - "@patch/extensions.yaml"
     - "@patch/kubelet-extra-mounts.yaml"
     - "@patch/kubespan.yaml"
     - "@patch/remove-admission-control.yaml"
 worker:
   patches:
+    - "@patch/cni.yaml"
     - "@patch/extensions.yaml"
     - "@patch/kubelet-extra-mounts.yaml"
     - "@patch/kubespan.yaml"
