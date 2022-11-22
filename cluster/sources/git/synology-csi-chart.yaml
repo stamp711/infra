@@ -5,7 +5,7 @@ metadata:
   name: synology-csi-chart
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 1h
   ref:
     # renovate: datasource=github-releases depName=christian-schlichtherle/synology-csi-chart
     tag: "v0.5.0"

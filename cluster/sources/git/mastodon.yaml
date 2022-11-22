@@ -2,16 +2,16 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: cloudflare-operator
+  name: mastodon
   namespace: flux-system
 spec:
   interval: 1h
   ref:
-    # renovate: datasource=github-tags depName=adyanth/cloudflare-operator
-    tag: "v0.8.3"
-  url: https://github.com/adyanth/cloudflare-operator
+    # renovate: datasource=github-releases depName=mastodon/mastodon
+    tag: "v4.0.2"
+  url: https://github.com/mastodon/mastodon
   ignore: |
     # exclude all
     /*
     # path to manifests
-    !/config
+    !/chart
