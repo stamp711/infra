@@ -1,0 +1,60 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mastodon
+  namespace: mastodon
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: chart
+      sourceRef:
+        kind: GitRepository
+        name: mastodon
+        namespace: flux-system
+  install:
+    createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  values:
+    mastodon:
+      createAdmin:
+        enabled: true
+        username: apricity
+        email: ${SECRET_EMAIL}
+      local_domain: &host ${SECRET_MASTODON_DOMAIN}
+      persistence:
+        assets:
+          storageClassName: local-path
+        system:
+          storageClassName: local-path
+      secrets:
+        existingSecret: mastodon-secrets
+    ingress:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
+        external-dns/is-public: "true"
+        hajimari.io/enable: "true"
+      hosts:
+        - host: *host
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+            - *host
+    postgresql:
+      auth:
+        database: mastodon_production
+        username: mastodon
+        password: mastodon
+        postgresPassword: mastodon
+    redis:
+      password: mastodon
+      architecture: standalone
