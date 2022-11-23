@@ -6,4 +6,5 @@ resources:
   - echo-server
   - gitea
   - paperless
+  - seafile
   - shiori

@@ -1,0 +1,55 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: seafile
+  namespace: default
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: seafile
+      version: 3.1.2
+      sourceRef:
+        kind: HelmRepository
+        name: geek-cookbook
+        namespace: flux-system
+  install:
+    createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
+  values:
+    env:
+      SEAFILE_ADMIN_EMAIL: ${SECRET_EMAIL}
+      SEAFILE_ADMIN_PASSWORD: ${SECRET_DEFAULT_PASSWORD}
+      SEAFILE_SERVER_HOSTNAME: &host seafile.${SECRET_DOMAIN}
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: nginx
+        annotations:
+          external-dns.alpha.kubernetes.io/target: "ipv4.${SECRET_DOMAIN}"
+          external-dns/is-public: "true"
+          hajimari.io/enable: "true"
+        hosts:
+          - host: *host
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - *host
+    mariadb:
+      enabled: true
+      auth:
+        database:
+        username:
+        password:
+        rootPassword: seafilerootpass
+      primary:
+        persistence:
+          enabled: true
+

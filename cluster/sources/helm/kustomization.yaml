@@ -8,11 +8,13 @@ resources:
   - djjudas21.yaml
   - dysnix.yaml
   - external-dns.yaml
+  - geek-cookbook.yaml
   - gitea.yaml
   - hajimari.yaml
   - ingress-nginx.yaml
   - jetstack.yaml
   - k8s-gateway.yaml
+  - k8tz.yaml
   - coder-v2.yaml
   - kubereboot.yaml
   - lwolf.yaml
