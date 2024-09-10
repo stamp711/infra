@@ -8,5 +8,5 @@ spec:
   interval: 1h
   ref:
     # renovate: datasource=github-releases depName=christian-schlichtherle/synology-csi-chart
-    tag: "v0.5.0"
+    tag: "v0.10.1"
   url: https://github.com/christian-schlichtherle/synology-csi-chart
