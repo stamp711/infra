@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: ghcr.io/go-shiori/shiori
-      tag: v1.5.3
+      tag: v1.7.1
     service:
       main:
         ports:
